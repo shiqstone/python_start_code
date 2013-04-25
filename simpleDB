@@ -1,0 +1,26 @@
+#simple db
+people = {
+    'Alice':{
+        'phone':'2314',
+        'addr':'foo driver 23'
+        },
+    'Beth':{
+        'phone':'3333',
+        'addr':'fdfde 33'
+        }
+}
+
+labels = {
+    'phone':'phone number',
+    'addr':'address'
+    }
+
+
+name = raw_input('Name: ')
+
+request = raw_input('Phone number (p) or address (a)?')
+if request == 'p': key = 'phone'
+if request == 'a': key = 'addr'
+
+if name in people: print "%s's %s is %s." %\
+   (name, labels[key], people[name][key])
